@@ -1,0 +1,106 @@
+.card_list {
+    background-color: #f0f0f0;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.card {
+    width: 45%;
+    min-width: 260px;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0px 3px 12px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 12px 0px rgb(0 0 0 / 10%);
+}
+.card>div {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card>.card-header {
+    width: 33.333%;
+}
+.card>.card-header>img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 50%);
+}
+
+.card>.card-body {
+    width: 66.666%;
+    display: block;
+}
+.card>.card-body>.office {
+    color: #1062fe;
+    font-size: 12px;
+}
+.card>.card-body>.desc {
+    margin-bottom: 15px;
+    padding: 0 10px;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 25px;
+}
+.card>.card-body>.card-social {
+    width: unset;
+    margin: 0 auto;
+}
+.card>.card-body>.card-social>a {
+    width: 35px;
+    height: 35px;
+    color: #777777;
+    margin-right: 10px;
+    background-color: transparent;
+    border-color: #dddddd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #cccccc;
+    border-radius: 3px;
+    transition: all .1s ease-in-out;
+    text-decoration: underline;
+}
+.card>.card-body>.card-social>a:hover {
+    color:#5555ff;
+    border: 1.5px solid #5555ff;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+    .card_list>.card {
+        width: 93%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .card_list>.card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card_list>.card>.card-body>.card-social {
+        justify-content: center;
+        display: flex;
+    }
+}
